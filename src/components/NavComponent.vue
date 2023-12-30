@@ -7,7 +7,7 @@
                     <a href="#hero" class=" px-3 py-2 hover:text-sky-500 transition-colors">Inicio</a>
                     <a href="#about" class=" px-3 py-2 hover:text-sky-500 transition-colors">Acerca de</a>
                     <a href="#portfolio" class=" px-3 py-2 hover:text-sky-500 transition-colors">Portfolio</a>
-                    <a href="#contact" class=" px-3 py-2 hover:text-sky-500 transition-colors">Contact</a>
+                    <a href="#contact" class=" px-3 py-2 hover:text-sky-500 transition-colors">Contacto</a>
 
                     <button @click='$emit("darkMode")'
                     class=" rounded-full  text-slate-500 hover:text-sky-500 transition-colors ">

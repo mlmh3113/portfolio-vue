@@ -9,7 +9,7 @@ import FooterComponent from './components/FooterComponent.vue'
 import { ref, onMounted , computed } from 'vue';
 
 const data = ref()
-const dark = ref(false)
+const dark = ref(true)
 const url = 'https://mlmh3113.pythonanywhere.com/work/'
 
 const getData = async () => {

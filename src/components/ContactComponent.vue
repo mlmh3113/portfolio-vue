@@ -30,7 +30,7 @@
 
 
 
-                    <div class="flex flex-row gap-4 justify-center ">
+                    <div class="flex flex-row gap-4 justify-center mt-1 ">
                         <a href="https://github.com/mlmh3113" class="hover:scale-105 transition" target="_blank"
                             rel="noopener noreferrer" aria-label="Github">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-7 fill">
@@ -59,26 +59,26 @@
                 <div class="flex flex-col w-full ">
                     <label class="block" for="user_name">Nombre:</label>
                     <input
-                        class="w-full mt-1 border border-sky-900 py-2 px-3 rounded-md focus-within:outline-none select-none"
+                        class="w-full text-black mt-1 border border-sky-900 py-2 px-3 rounded-md focus-within:outline-none select-none"
                         id="user_name" v-model="formData.user_name" placeholder="Nombre" type="text" name="user_name">
                         <span v-for="error in v$.user_name.$errors" :key="error.$uid" class="text-red-500 text-sm mt-1">{{ error.$message == "Value is required"? "El campo es requerido": error.$message  }}</span>
                     </div>
                 <div class="flex flex-col w-full ">
                     <label class="block" for="user_email">Correo:</label>
                     <input
-                        class="w-full mt-1 border border-sky-900 py-2 px-3 rounded-md focus-within:outline-none select-none"
+                        class="w-full text-black mt-1 border border-sky-900 py-2 px-3 rounded-md focus-within:outline-none select-none"
                         id="user_email" v-model="formData.user_email" placeholder="Correo" type="text" name="user_email">
                         <span v-for="error in v$.user_email.$errors" :key="error.$uid" class="text-red-500 text-sm mt-1">{{ error.$message == "Value is required"? "El campo es requerido": error.$message == "Value is not a valid email address"? "El correo no es valido": error.$message }}</span>
                
                     </div>
                 <div class="flex flex-col w-full ">
                     <label class="block" for="message">Mensaje:</label>
-                    <textarea class="rounded resize-none h-52 mt-1 border border-sky-900" v-model="formData.message"
+                    <textarea class="rounded text-black resize-none h-52 mt-1 border border-sky-900" v-model="formData.message"
                         name="message" id="message" cols="30" rows="10"></textarea>
                         <span v-for="error in v$.message.$errors" :key="error.$uid" class="text-red-500 text-sm mt-1">{{ error.$message == "Value is required"? "El campo es requerido": error.$message }}</span>
                 </div>
 
-                <p>{{ mensaje }}</p>
+                <p v-if="mensaje" class="rounded text-white bg-emerald-500 mt-1 text-center">{{ mensaje }}</p>
 
 
                 <div>
