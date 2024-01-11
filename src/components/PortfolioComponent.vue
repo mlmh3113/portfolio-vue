@@ -7,7 +7,7 @@
             :class="isDark ? 'dark' : 'text-black'">
 
             <div class="rounded-lg shadow-2xl overflow-hidden my-4"
-                :class="isDark ? 'dark shadow-blue-900/30' : 'text-black bg-white'" v-for="item in projects" :key="item.id">
+                :class="isDark ? 'dark shadow-blue-900/30' : 'text-black bg-white'" v-for="item in projects.slice(0,cantidad )" :key="item.id">
                 <div class=" h-30">
                     <img class="h-full w-full object-fill object-center" src="/images/blogApi_Python.png" :alt=item.title
                         loading="lazy">
@@ -43,12 +43,18 @@
 
 
         </div>
+        <div class="flex justify-center">
+            <button class="btn inline-block rounded bg-sky-500 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-sky-400"
+             @click="mostrarMas" v-if="toggleMostrar ? value='Ver menos' : value='Ver mas'">{{ value }}</button>
+        </div>
+
     </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { ref , computed } from 'vue';
 import { projects } from '../data/projects';
+
 
 const emit = defineEmits([
     'darkMode'
@@ -59,12 +65,24 @@ const isDark = computed(() => {
     return props.dark;
 })
 
+const cantidad = ref(3)
+const toggleMostrar= ref(false)
+
 
 const props = defineProps({
     dark: {
         type: Boolean
     }
 })
+
+const mostrarMas =() => {
+    toggleMostrar.value = !toggleMostrar.value
+    if (toggleMostrar.value == true) {
+        cantidad.value = projects.length
+    }else {
+        cantidad.value = 3
+    }
+}
 
 </script>
 
