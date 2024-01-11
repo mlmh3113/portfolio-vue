@@ -6,29 +6,16 @@ import PortfolioComponent from './components/PortfolioComponent.vue'
 import ContactComponent from './components/ContactComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
 
-import { ref, onMounted , computed } from 'vue';
+import { ref } from 'vue';
 
-const data = ref()
+
 const dark = ref(true)
-const url = 'https://mlmh3113.pythonanywhere.com/work/'
 
-const getData = async () => {
-    try {
-        const response = await fetch(url)
-        const json = await response.json()
-        data.value = json
-    } catch (error) {
-        console.log(error);
-    }
-}
 
 const darkMode = ()=>{
     dark.value = !dark.value
 }
 
-onMounted(() => {
-    getData()
-})
 
 </script>
 
@@ -37,7 +24,7 @@ onMounted(() => {
 <NavComponent @darkMode="darkMode" :dark="dark"/>
 <HeroComponent @darkMode="darkMode" :dark="dark" />
 <AboutComponent @darkMode="darkMode" :dark="dark"/>
-<PortfolioComponent @darkMode="darkMode" :dark="dark" :data="data"/>
+<PortfolioComponent @darkMode="darkMode" :dark="dark"/>
 <ContactComponent @darkMode="darkMode" :dark="dark"/>
 <FooterComponent @darkMode="darkMode" :dark="dark"/>
 

@@ -31,8 +31,8 @@
 </template>
 
 <script setup>
-
 import { computed } from 'vue';
+import { projects } from '../data/projects';
 
 const emit = defineEmits([
     'darkMode'
