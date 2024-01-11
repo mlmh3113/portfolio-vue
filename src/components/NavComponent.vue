@@ -1,5 +1,5 @@
 <template>
-    <header class="shadow fixed border-b px-6 top-0 left-0 right-0 items-center " :class="isDark ? 'dark bg-[rgb(20,24,24)]' : 'bg-slate-200 text-black'">
+    <header class="shadow fixed z-50 border-b px-6 top-0 left-0 right-0 items-center " :class="isDark ? 'dark bg-[rgb(20,24,24)]' : 'bg-slate-200 text-black'">
 
             <div class="flex after:-mr-4 justify-center flex-wrap">
        

@@ -44,7 +44,7 @@
 
         </div>
         <div class="flex justify-center">
-            <button class="btn inline-block rounded bg-sky-500 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-sky-400"
+            <button class="inline-block rounded bg-sky-500 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-sky-400"
              @click="mostrarMas" v-if="toggleMostrar ? value='Ver menos' : value='Ver mas'">{{ value }}</button>
         </div>
 
