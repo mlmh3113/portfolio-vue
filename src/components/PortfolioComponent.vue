@@ -10,7 +10,7 @@
                 :class="isDark ? 'dark shadow-blue-900/30' : 'text-black bg-white'"
                 v-for="item in projects.slice(0, cantidad)" :key="item.id">
                 <div class=" h-30">
-                    <img class="h-full w-full object-fill object-center" :src="item.image" :alt=item.title loading="lazy">
+                    <img class="h-full w-full object-cover object-center min-h-80 " :src="item.image" :alt=item.title loading="lazy">
                     <div class="flex flex-col p-6">
                         <div class="space-y-2">
                             <h3 class="text-xl font-semibold text-sky-500">{{ item.title }}</h3>
