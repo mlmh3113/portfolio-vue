@@ -20,7 +20,7 @@
                     </a>
                     <a class="inline-block rounded bg-gradient-to-r from-green-400 to-blue-500 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
                         href="#portfolio">
-                        Portfolio
+                        Proyectos
                     </a>
                 </div>
 

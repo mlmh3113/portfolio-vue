@@ -5,8 +5,8 @@
        
                 <div class="space-x-8 ml-8 hidden md:flex">
                     <a href="#hero" class=" px-3 py-2 hover:text-sky-500 transition-colors">Inicio</a>
-                    <a href="#about" class=" px-3 py-2 hover:text-sky-500 transition-colors">Acerca de</a>
-                    <a href="#portfolio" class=" px-3 py-2 hover:text-sky-500 transition-colors">Portfolio</a>
+                    <a href="#about" class=" px-3 py-2 hover:text-sky-500 transition-colors">Sobre mi</a>
+                    <a href="#portfolio" class=" px-3 py-2 hover:text-sky-500 transition-colors">Proyectos</a>
                     <a href="#contact" class=" px-3 py-2 hover:text-sky-500 transition-colors">Contacto</a>
 
                     <button @click='$emit("darkMode")'
@@ -45,8 +45,8 @@
                     <div  class="flex flex-col gap-3 my-2">
                           <ul  :class="toggle ? 'hidden':''">
                         <li class="py-3" @click="toggleMenu"><a href="#hero"  class=" px-3  hover:text-sky-500 transition-colors">Inicio</a></li>
-                        <li class="py-3" @click="toggleMenu"><a href="#about" class=" px-3  hover:text-sky-500 transition-colors">Acerca de</a></li>
-                        <li class="py-3" @click="toggleMenu"><a href="#portfolio" class=" px-3  hover:text-sky-500 transition-colors">Portfolio</a></li>
+                        <li class="py-3" @click="toggleMenu"><a href="#about" class=" px-3  hover:text-sky-500 transition-colors">Sobre mi</a></li>
+                        <li class="py-3" @click="toggleMenu"><a href="#portfolio" class=" px-3  hover:text-sky-500 transition-colors">Proyectos</a></li>
                         <li class="py-3" @click="toggleMenu"><a href="#contact" class=" px-3  hover:text-sky-500 transition-colors">Contacto</a></li>
                     </ul>
                     </div>

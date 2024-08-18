@@ -15,7 +15,7 @@ export const projects = [
         "image":"https://res.cloudinary.com/dkoocayxp/image/upload/v1710496088/portfolio/getFit_atmux0.png",
         "github": "https://github.com/mlmh3113/personal-fit-back.git",
         "live": "https://personal-fit-front.vercel.app/",
-        "tecnologies":["Vue.js","Tailwind","Node.js","Express.js","MongoDB","Axios","Pinia","JavaScript","JWT"]
+        "tecnologies":["Vue.js","Tailwind","Node.js","MongoDB","Pinia","JavaScript"]
     },
     {
         "id": 20,
@@ -42,7 +42,7 @@ export const projects = [
         "image":"https://res.cloudinary.com/dkoocayxp/image/upload/v1705064704/portfolio/SQL-shotSO_l5toor.png",
         "github": "https://github.com/mlmh3113/drfpython.git",
         "live": "http://martinh3113.pythonanywhere.com/posts/",
-        "tecnologies":["JavaScript","Vue.js","Tailwind","SQL","Axios","Pinia","HTML","CSS"] 
+        "tecnologies":["JavaScript","Vue.js","Tailwind","SQL","Pinia"] 
     },
     {
         "id": 5,

@@ -1,12 +1,12 @@
 <template>
     <div id="portfolio" class="py-5 min-h-screen" :class="isDark ? 'dark bg-slate-900' : 'text-black bg-slate-300'">
-        <h2 class="text-5xl font-semibold text-center" :class="isDark ? 'dark text-slate-300' : 'text-slate-700'">Portfolio
+        <h2 class="text-5xl font-semibold text-center" :class="isDark ? 'dark text-slate-300' : 'text-slate-700'">Proyectos
         </h2>
 
         <div class="grid mt-5 md:grid-cols-2 md:gap-3 lg:grid-cols-3 p-4 w-5/6 mx-auto"
             :class="isDark ? 'dark' : 'text-black'">
 
-            <div class="rounded-lg shadow-2xl overflow-hidden my-4"
+            <div class="rounded-lg shadow-2xl overflow-hidden my-4 border border-gray-200"
                 :class="isDark ? 'dark shadow-blue-900/30' : 'text-black bg-white'"
                 v-for="item in projects.slice(0, cantidad)" :key="item.id">
                 <div class=" h-30">
@@ -14,7 +14,7 @@
                     <div class="flex flex-col p-6 h-full">
                         <div class="space-y-2">
                             <h3 class="text-xl font-semibold text-sky-500">{{ item.title }}</h3>
-                            <p>{{ item.description }}</p>
+                            <p>{{ truncate(item.description)  }}</p>
                         </div>
 
                         <div class="flex flex-wrap gap-2 mt-3">
@@ -85,6 +85,14 @@ const mostrarMas = () => {
         cantidad.value = projects.length
     } else {
         cantidad.value = 3
+    }
+}
+
+const truncate = (str) => {
+    if (str.length > 100) {
+        return str.slice(0, 100) + '...'
+    } else {
+        return str
     }
 }
 
